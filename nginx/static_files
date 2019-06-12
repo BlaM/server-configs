@@ -1,0 +1,5 @@
+expires		180d;
+try_files	$uri =404;
+access_log	off;
+add_header	Pragma "public";
+add_header	Cache-Control  "public, must-revalidate, proxy-revalidate";

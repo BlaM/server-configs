@@ -1,0 +1,18 @@
+# https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
+
+##################
+# SSL Protocols
+##################
+ssl_protocols TLSv1.2 TLSv1.3; # Requires nginx >= 1.13.0 else use TLSv1.2
+
+##################
+# The Cipher Suite
+##################
+ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384;
+
+##################
+# Extra settings
+##################
+ssl_prefer_server_ciphers on;
+ssl_session_cache shared:SSL:10m;
+
